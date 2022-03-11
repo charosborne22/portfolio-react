@@ -9,7 +9,7 @@ import Submitted from "./pages/Submitted";
 import Ethics from "./pages/Ethics";
 import Policy from "./pages/Policy";
 import Error from "./pages/Error";
-import { Routes, Route, useLocation, Navigate } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 
 import { AnimatePresence } from "framer-motion";
 
@@ -20,7 +20,7 @@ function App() {
     <div className="App">
       <GlobalStyle />
       <Nav />
-      <main>
+      <main id="main">
         <AnimatePresence exitBeforeEnter>
           <Routes location={location} key={location.pathname}>
             <Route path="/" exact element={<Index />} />

@@ -8,42 +8,56 @@ const Nav = () => {
     setNavStatus(!navStatus);
   };
   return (
-    <Header>
-      <StyledNav>
-        <h1 className="logo">
-          <Link to="/">CO.</Link>
-        </h1>
-        <div
-          className={`menu-icon ${navStatus ? "menu-icon-active" : ""}`}
-          onClick={navHandler}
-        >
-          <div className="line line1"></div>
-          <div className="line line2"></div>
-          <div className="line line3"></div>
-        </div>
-        <div className={`nav-list ${navStatus ? "nav-active" : ""}`}>
-          <ul>
-            <li>
-              <Link to="/" onClick={navHandler}>
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link to="/about" onClick={navHandler}>
-                About
-              </Link>
-            </li>
-            <li>
-              <Link to="/contact" onClick={navHandler}>
-                Contact
-              </Link>
-            </li>
-          </ul>
-        </div>
-      </StyledNav>
-    </Header>
+    <>
+      <SkipLink href="#main">Skip to main content</SkipLink>
+      <Header>
+        <StyledNav>
+          <h1 className="logo">
+            <Link to="/">CO.</Link>
+          </h1>
+          <div
+            className={`menu-icon ${navStatus ? "menu-icon-active" : ""}`}
+            onClick={navHandler}
+          >
+            <div className="line line1"></div>
+            <div className="line line2"></div>
+            <div className="line line3"></div>
+          </div>
+          <div className={`nav-list ${navStatus ? "nav-active" : ""}`}>
+            <ul>
+              <li>
+                <Link to="/" onClick={navHandler}>
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link to="/about" onClick={navHandler}>
+                  About
+                </Link>
+              </li>
+              <li>
+                <Link to="/contact" onClick={navHandler}>
+                  Contact
+                </Link>
+              </li>
+            </ul>
+          </div>
+        </StyledNav>
+      </Header>
+    </>
   );
 };
+
+const SkipLink = styled.a`
+  position: absolute;
+  transform: translateY(-100%);
+  z-index: 11;
+  transition: 0.4s;
+
+  &:focus {
+    transform: translateY(0);
+  }
+`;
 
 const Header = styled.header`
   position: sticky;

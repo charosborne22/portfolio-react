@@ -7,6 +7,12 @@ const Nav = () => {
   const navHandler = () => {
     setNavStatus(!navStatus);
   };
+
+  const handleKeyDown = (e) => {
+    if (e.key === "Enter") {
+      navHandler();
+    }
+  };
   return (
     <>
       <SkipLink href="#main">Skip to main content</SkipLink>
@@ -18,6 +24,8 @@ const Nav = () => {
           <div
             className={`menu-icon ${navStatus ? "menu-icon-active" : ""}`}
             onClick={navHandler}
+            onKeyDown={handleKeyDown}
+            tabIndex="0"
           >
             <div className="line line1"></div>
             <div className="line line2"></div>

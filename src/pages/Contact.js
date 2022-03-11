@@ -56,6 +56,10 @@ const Contact = () => {
 const StyledContact = styled.div`
   display: flex;
   height: 100%;
+
+  @media (max-width: 767.98px) {
+    display: block;
+  }
 `;
 
 const ContactText = styled(motion.div)`

@@ -18,12 +18,15 @@ const Footer = () => {
             </a>
           </li>
           <li>
-            <a href="https://codepen.io/charlotteosborne">
+            <a href="https://codepen.io/charlotteosborne" target="_blank">
               <FontAwesomeIcon icon={faCodepen} />
             </a>
           </li>
           <li>
-            <a href="https://www.linkedin.com/in/charlotte-osborne-bb5a591a6/">
+            <a
+              href="https://www.linkedin.com/in/charlotte-osborne-bb5a591a6/"
+              target="_blank"
+            >
               <FontAwesomeIcon icon={faLinkedin} />
             </a>
           </li>

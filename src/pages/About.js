@@ -60,6 +60,12 @@ const About = () => {
               <FontAwesomeIcon icon={faCheck} /> React
             </li>
             <li>
+              <FontAwesomeIcon icon={faCheck} /> Next.js
+            </li>
+            <li>
+              <FontAwesomeIcon icon={faCheck} /> Strapi
+            </li>
+            <li>
               <FontAwesomeIcon icon={faCheck} /> Framer Motion
             </li>
           </ul>
